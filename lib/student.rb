@@ -66,8 +66,8 @@ attr_reader :id
     SQL
 
     row = DB[:conn].execute(sql, name)
-    Student.new_from_db(row)
-
+    new_student = Student.new_from_db(row)
+    new_student
   end
 
 end
